@@ -12,15 +12,15 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 				t.SelectedFutureOSPParcel = 1;
 				t.FutureOSPParcelsInQuery = 2;
 				t.CommunityBoundary = 3;
-				t.EstuarineRegulatorySetbackArea = 4;
-				t.NFOSEligibleParcels = 5;
-				t.OSPEligibleParcelsLandUse = 6;
-				t.StaticVegetationLine = 7;
-				t.ImpactAdjustedExclusionArea = 8;
-				t.OSPEligibleAreas = 9;
-				t.ImpactAdjustedFloodplainSFHA = 10;
-				t.ThirtyyrProjectedCoastalErosionHazardArea = 11;
-				t.FutureOSPParcels = 12;
+				//t.EstuarineRegulatorySetbackArea = 4;
+				t.NFOSEligibleParcels = 4;
+				t.OSPEligibleParcelsLandUse = 5;
+				//t.StaticVegetationLine = 7;
+				//t.ImpactAdjustedExclusionArea = 8;
+				//t.OSPEligibleAreas = 9;
+				t.ImpactAdjustedFloodplainSFHA = 7;
+				//t.ThirtyyrProjectedCoastalErosionHazardArea = 11;
+				//t.FutureOSPParcels = 12;
 				// visible layer groups from map service
 				t.dlOspLayers1 = [t.CommunityBoundary, t.OSPEligibleAreas, t.ImpactAdjustedFloodplainSFHA];
 				t.dlOspLayers = [t.CommunityBoundary, t.OSPEligibleAreas];
@@ -76,6 +76,9 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 						$('#' + t.id + 'printAnchorDiv').empty();
 						// use selected community to query community layer 	
 						var q = new Query();
+						if (t.obj.crsSelected == "D'Iberville MS"){
+							t.obj.crsSelected = "D''Iberville MS";
+						}
 						q.where = "CRS_NAME = '" + t.obj.crsSelected + "'";
 						t.crsFL.selectFeatures(q,FeatureLayer.SELECTION_NEW);
 						t.clicks[t.obj.active](t);
