@@ -33,7 +33,7 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 				// show popup info graphic
 				$("#" + t.id + "viewInfoGraphic").on('click',function(c){
 					TINY.box.show({
-						animate: true, url: 'plugins/community-rating-system/html/info-graphic.html',
+						animate: true, url: 'plugins/gulf-mex-crs/html/info-graphic.html',
 						fixed: true, width: 660, height: 570
 					});		
 				})

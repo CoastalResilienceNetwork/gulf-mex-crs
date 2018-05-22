@@ -1,6 +1,6 @@
 {
     "css": [
-		"plugins/community-rating-system/css/main.css"
+		"plugins/gulf-mex-crs/css/main.css"
     ],
     "use": {
         "underscore": { "attach": "_" },

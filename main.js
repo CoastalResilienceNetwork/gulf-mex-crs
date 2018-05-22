@@ -83,11 +83,11 @@ function ( 	declare, PluginBase, ContentPane, dom, domStyle, domGeom, obj, conte
 			this.future = new future();
 			this.parcels = new parcels();
 			// ADD HTML TO APP
-			$(this.container).parent().append('<button id="viewCrsInfoGraphicIcon" class="button button-default ig-icon"><img src="plugins/community-rating-system/images/InfographicIcon_v1_23x23.png" alt="show overview graphic"></button>')
+			$(this.container).parent().append('<button id="viewCrsInfoGraphicIcon" class="button button-default ig-icon"><img src="plugins/gulf-mex-crs/images/InfographicIcon_v1_23x23.png" alt="show overview graphic"></button>')
 			$(this.container).parent().find("#viewCrsInfoGraphicIcon").on('click',function(c){
 				TINY.box.show({
 					animate: true,
-					url: 'plugins/community-rating-system/html/info-graphic.html',
+					url: 'plugins/gulf-mex-crs/html/info-graphic.html',
 					fixed: true,
 					width: 660,
 					height: 570
