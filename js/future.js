@@ -198,6 +198,25 @@ function ( ArcGISDynamicMapServiceLayer, Extent, SpatialReference, Query, QueryT
 						$("#" + t.id + "slider-wrap").slideUp();
 					}		
 				})
+				$("#" + t.id + "PriorOSP").on("change",function(c){
+					if (c.target.checked){
+						var ind = t.obj.visibleLayers.indexOf(t[c.target.value])
+						if (ind == -1){
+							t.obj.visibleLayers.push(t[c.target.value]);
+							t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+						}	
+						t.obj.PriorOSP = true;
+						$("#" + t.id + "slider-wrap").slideDown();
+					}else{
+						var ind = t.obj.visibleLayers.indexOf(t[c.target.value])
+						if (ind > -1){
+							t.obj.visibleLayers.splice(ind, 1);
+							t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
+						}
+						t.obj.PriorOSP = false;
+						$("#" + t.id + "slider-wrap").slideUp();
+					}		
+				})
         	},
         	sortFuture: function(t){
         		var av = ""
