@@ -23,9 +23,9 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 				t.FutureOSPParcels = 12;
 				t.PriorValidatedOSP = 13;
 				// visible layer groups from map service
-				t.dlOspLayers1 = [t.CommunityBoundary, t.OSPEligibleAreas, t.ImpactAdjustedFloodplainSFHA];
+				t.dlOspLayers1 = [t.CommunityBoundary, t.OSPEligibleAreas, t.ImpactAdjustedFloodplainSFHA,t.PriorValidatedOSP];
 				t.dlOspLayers = [t.CommunityBoundary, t.OSPEligibleAreas];
-				t.transLayer = [t.ImpactAdjustedFloodplainSFHA,t.PriorValidatedOSP];
+				t.transLayer = [t.ImpactAdjustedFloodplainSFHA];
 				t.pinLayers = [t.CommunityBoundary, t.NFOSEligibleParcels, t.OSPEligibleParcelsLandUse];
 				t.pinLayers1 = [t.CommunityBoundary, t.NFOSEligibleParcels, t.OSPEligibleParcelsLandUse, t.ImpactAdjustedFloodplainSFHA];
 				t.infoid = "";
@@ -188,7 +188,8 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 						t.obj.visibleLayers = [t.CommunityBoundary];
 						t.dynamicLayer.setVisibleLayers(t.obj.visibleLayers);
 						$('#' + t.id + 'curElOsp').prop('checked', t.obj.curElOsp).trigger("change");
-						$('#' + t.id + 'ImpactAd').prop('checked', t.obj.ImpactAd).trigger("change");		
+						$('#' + t.id + 'ImpactAd').prop('checked', t.obj.ImpactAd).trigger("change");
+						$('#' + t.id + 'PriorOSP').prop('checked', t.obj.PriorOSP).trigger("change");
 					}else{
 						$("#" + t.id + t.obj.active).slideUp();
 						$("#" + t.id + "no-future-parcels").html("No future OSP parcels in " + t.obj.crsSelected)
