@@ -15,6 +15,7 @@
 	"searchedPin": "",
 	"curElOsp" : true,
 	"ImpactAd" : true,
+	"PriorOSP" : true,
 	"futAcreVal": 0,
 	"totalFuturePoints": 0,
 	"taxGrLs": ">",
