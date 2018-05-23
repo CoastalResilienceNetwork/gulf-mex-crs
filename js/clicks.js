@@ -24,8 +24,8 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 				t.PriorValidatedOSP = 13;
 				// visible layer groups from map service
 				t.dlOspLayers1 = [t.CommunityBoundary, t.OSPEligibleAreas, t.ImpactAdjustedFloodplainSFHA];
-				t.dlOspLayers = [t.CommunityBoundary, t.OSPEligibleAreas,t.PriorValidatedOSP];
-				t.transLayer = [t.ImpactAdjustedFloodplainSFHA];
+				t.dlOspLayers = [t.CommunityBoundary, t.OSPEligibleAreas];
+				t.transLayer = [t.ImpactAdjustedFloodplainSFHA,t.PriorValidatedOSP];
 				t.pinLayers = [t.CommunityBoundary, t.NFOSEligibleParcels, t.OSPEligibleParcelsLandUse];
 				t.pinLayers1 = [t.CommunityBoundary, t.NFOSEligibleParcels, t.OSPEligibleParcelsLandUse, t.ImpactAdjustedFloodplainSFHA];
 				t.infoid = "";
