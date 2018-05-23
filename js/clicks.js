@@ -21,6 +21,7 @@ function ( declare, Query, QueryTask, FeatureLayer ) {
 				t.ImpactAdjustedFloodplainSFHA = 10;
 				t.ThirtyyrProjectedCoastalErosionHazardArea = 11;
 				t.FutureOSPParcels = 12;
+				t.PriorValidatedOSP = 13;
 				// visible layer groups from map service
 				t.dlOspLayers1 = [t.CommunityBoundary, t.OSPEligibleAreas, t.ImpactAdjustedFloodplainSFHA];
 				t.dlOspLayers = [t.CommunityBoundary, t.OSPEligibleAreas];
